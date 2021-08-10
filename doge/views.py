@@ -19,10 +19,10 @@ from .models import User, ABI
 @csrf_exempt
 def home(request):
     # Authenticated users view their inbox
-    if request.user.is_authenticated:
+        '''
         web3 = Web3()
         print(web3)
-        '''
+        
         web3 = Web3(Web3.HTTPProvider('http://127.0.0.1:7545'))
         
 
@@ -43,66 +43,8 @@ def home(request):
         contract.functions.reserveCraniums(40).transact( {'from': accounts[0]})
         
         print(contract.functions.totalSupply().call())
-'''
+        '''
         return render(request, "doge/about.html")
-
-
-    # Everyone else is prompted to sign in
-    else:
-        return HttpResponseRedirect(reverse("login"))
-
-
-def login_view(request):
-    if request.method == "POST":
-
-        # Attempt to sign user in
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = authenticate(request, username=username, password=password)
-
-        # Check if authentication successful
-        if user is not None:
-            login(request, user)
-            return HttpResponseRedirect(reverse("index"))
-        else:
-            return render(request, "doge/login.html", {
-                "message": "Invalid username and/or password."
-            })
-    else:
-        return render(request, "doge/login.html")
-
-
-def logout_view(request):
-    logout(request)
-    return HttpResponseRedirect(reverse("index"))
-
-
-def register(request):
-    if request.method == "POST":
-        username = request.POST["username"]
-        email = request.POST["email"]
-
-        # Ensure password matches confirmation
-        password = request.POST["password"]
-        confirmation = request.POST["confirmation"]
-        if password != confirmation:
-            return render(request, "doge/register.html", {
-                "message": "Passwords must match."
-            })
-
-        # Attempt to create new user
-        try:
-            user = User.objects.create_user(username, email, password)
-            user.save()
-        except IntegrityError:
-            return render(request, "doge/register.html", {
-                "message": "Username already taken."
-            })
-        login(request, user)
- 
-        return HttpResponseRedirect(reverse("index"))
-    else:
-        return render(request, "doge/register.html")
         
 
 def about(request):
