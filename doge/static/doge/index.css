@@ -1,4 +1,12 @@
+/*font*/
+
+@font-face {
+    font-family: caslon openface;
+    src: url("./fonts/caslonOpenface.otf") format("opentype");
+}
+
 /* ------------ This is the layout -----------*/
+
 
 #navbarFoldout {
     text-align: center;
