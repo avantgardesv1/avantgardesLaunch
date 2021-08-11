@@ -43,7 +43,7 @@
     /* Second div container, holds the background image */
     #div1_1 {
         background-attachment: fixed, scroll;
-        background-image: url("https://www.transparenttextures.com/patterns/cartographer.png"), url("/static/doge/images/background6.jpg");
+        background-image: url("https://www.transparenttextures.com/patterns/cartographer.png"), url("/static/doge/images/main_background.jpg");
         background-position: -5px -25px, 0 50%;
         background-repeat: repeat, no-repeat;
         background-size: auto, cover;
