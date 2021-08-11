@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 title: {
                   display: true,
                   text: 'Week 10',
+                },
+                legend: {
+                    display: false
                 }
               }
           
