@@ -177,27 +177,36 @@ def atm_memes(request):
 
 
 
-def abi(request, abi_id):
+def metadata(request, metadata_id):
 
-    abi_body = "none"
+    if metadata_id > 6968:
+        metadata_response = "none"
 
-    print(f"{abi_id} : post")
-    '''
-    with open('doge/api_list.json') as json_file:
-        abi_list = json.load(json_file)
-        print(abi_list)
+    else:
+        print(f"{metadata_id} : post")
+        '''
+        with open('doge/api_list.json') as json_file:
+            abi_list = json.load(json_file)
+            print(abi_list)
 
-    for i in range(len(abi_list)):
-        new_abi = ABI()
-        new_abi.body = abi_list[i]
-        new_abi.index = i
-        new_abi.save()
+        for i in range(len(abi_list)):
+            new_abi = ABI()
+            new_abi.body = abi_list[i]
+            new_abi.index = i
+            new_abi.save()
 
+        
+        '''
+        #old_abi = ABI.objects.get(index=abi_id)
+
+        with open('doge/api_list3.json') as json_file:
+            metadata_list = json.load(json_file)
+
+        metadata_response = metadata_list[metadata_id]
+        
+        print("\n\n\n")
+        print("ABIIIII")
     
-    '''
-    old_abi = ABI.objects.get(index=abi_id)
-    abi_body = json.dumps(old_abi.body, indent=4)
-    
-    print("\n\n\n")
-    
-    return render(request, "doge/abi.html", {"abi" : abi_body})
+    return JsonResponse(metadata_response, safe=False)
+
+    #return render(request, "doge/abi.html", {"abi" : abi_body})

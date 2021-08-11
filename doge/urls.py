@@ -14,7 +14,7 @@ urlpatterns = [
 
 
 
-    # This is the ABI route
-    path("abi/<int:abi_id>", views.abi, name="abi"),
+    # This is the API route
+    path("metadata/<int:metadata_id>", views.metadata, name="metadata"),
     
 ]
