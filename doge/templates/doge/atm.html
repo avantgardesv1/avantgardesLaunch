@@ -11,7 +11,7 @@
                 <h1 class="messages" id="h1_1">ATM</h1>
                 <p id="p1_1">** This is for explanation purposes only **</p>
                 <br>
-                <button id="button1" type="button" class="btn btn-outline-dark buttons">Show Guide</button>
+                <button id="button1" type="button" class="btn btn-outline-dark buttons" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Show Guide</button>
             </div>  
 
 
@@ -91,7 +91,22 @@
 
     </div>
       
-
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered ">
+      <div class="modal-content background">
+        <div class="modal-header">
+          <h5 class="modal-title header" id="staticBackdropLabel">** IMPORTANT **</h5>
+          <button id="button2" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This is NOT a representation of the real Avant-Gardes app.<br><br>
+          We thought this would be a fun way of explaining the concepts behind the Avant-Gardes.<br><br>
+          Lastly, this feature is best viewed on a computer. Thank you.
+        </div>
+      </div>
+    </div>
+  </div>
     
    
 {% endblock %}

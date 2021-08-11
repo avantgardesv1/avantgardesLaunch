@@ -67,12 +67,19 @@
                 border-color: #c1cdb8;;
             }
 
+            .buttons:disabled {
+                font-family: caslon;
+                background-color: transparent;
+                border-color: #c1cdb8;
+                color: #c1cdb8;
+            }
+
             #button3 {
                 margin-top: 5px;
             }
 
         #p1 {
-            display: none;
+            /*display: none;*/
             text-align: left;
             color: #c1cdb8;
             font-family: caslon;

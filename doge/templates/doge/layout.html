@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>{% block title %}Social Network{% endblock %}</title>
+        <title>{% block title %}Avant-Gardes{% endblock %}</title>
         <link href="{% static 'doge/index.css' %}" rel="stylesheet">
         <script src="{% static 'doge/index.js' %}"></script>
 
@@ -39,7 +39,7 @@
 
 
 
-                    <ul class="navbar-nav ms-auto" id="navbarFoldout">
+                    <ul class="navbar-nav ms-auto p-0 m-0" id="navbarFoldout">
                         <li class="nav-item no-login-view" id="no-login-view1">
                             <a id="feed" class="nav-link active navbarFoldout-links" aria-current="page" href="{% url 'home' %}">About</a>
                         </li>
@@ -80,47 +80,7 @@
                         </li>
 
                         <br>
-                    
-                    </ul>
 
-
-                    <ul class="navbar-nav ms-auto" id="navbarFoldout2">
-                        <li class="nav-item no-login-view" id="no-login-view1">
-                            <a id="feed" class="nav-link active navbarFoldout-links" aria-current="page" href="{% url 'about' %}">About2</a>
-                        </li>
-                        <li class="nav-item no-login-view" id="no-login-view2">
-                            <a class="nav-link" href="{% url 'join' %}">Join2</a>
-                        </li>
-                        <li class="nav-item  dropdown no-login-view" id="no-login-view3" >
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Varations2
-                            </a>
-
-                            <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="no-login-view3" >
-                                <li><a class="dropdown-item" href="#">Action2</a></li>
-                                <li><a class="dropdown-item" href="#">Another action2</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here2</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item login-view" id="login-view1">
-                            <a class="nav-link" href="#" >Feed</a>
-                        </li>
-                        <li class="nav-item login-view" id="login-view2">
-                            <a class="nav-link" href="#" >Following</a>
-                        </li>
-                        <li class="nav-item login-view" id="login-view3">
-                            <a class="nav-link" href="#" >Log</a>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <button id="login-button" type="button" class="btn btn-outline-dark login-button">
-                                Connected
-                            </button>
-                        </li>
-                    
-                    </ul>
                 </div>
                 </div>
             </nav>

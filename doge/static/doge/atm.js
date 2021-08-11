@@ -134,19 +134,26 @@ function load_page2() {
         
 
 
-        if (count % 2 == 0) {
-            for (const tt of tooltipList) {
-                tt.show()
-            }
-
-            document.querySelector("#button1").innerHTML = "Hide Guide";
+        if (count % 2 != 0) {
+            window.location.reload();
+            
         }
         else {
-            window.location.reload();
+            document.querySelector("#button1").innerHTML = "Hide Guide";
         }
 
         count++;
         
+    })
+
+    document.querySelector("#button2").addEventListener("click", () => {
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)});
+
+        for (const tt of tooltipList) {
+            tt.show()
+        }
     })
 
     /*//////////////////////

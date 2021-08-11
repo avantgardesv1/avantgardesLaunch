@@ -1,3 +1,27 @@
+/*/////////////////////////
+///// Just some basic classes that are used often
+////////////////////////////*/
+
+.header {
+    color: #1a2e25;
+    font-family: Calson;
+}
+.body {
+    color: white;
+    font-family: caslon;
+    font-size: 1.25rem;
+}
+.background {
+    background-color: #c1cdb8;
+}
+.links {
+    color: #1a2e25;
+}
+.links:hover {
+    color: white;
+}
+
+
 
 /* ///////////////////////
 //// /This is MEMES
