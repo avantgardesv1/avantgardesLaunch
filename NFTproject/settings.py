@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-52#-p#dr^9wi(#ef-i6(%jc0zf5%j!@yg0d5c#pe6q&vozcq_s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['avantgardesv1.herokuapp.com', '127.0.0.1', '0.0.0.0', 'avant-gardes.art']
+ALLOWED_HOSTS = ['avantgardesv1.herokuapp.com', '127.0.0.1', '0.0.0.0', 'www.avant-gardes.art']
 
 
 # Application definition
