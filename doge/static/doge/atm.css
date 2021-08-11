@@ -9,7 +9,7 @@
 .body {
     color: white;
     font-family: caslon;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 .background {
     background-color: #c1cdb8;
@@ -92,6 +92,24 @@
                 color:#c1cdb8;
                 font-family: caslon;
                 font-size: .75rem;
+            }
+
+            #p1_2 {
+                display: none;
+            }
+
+            .icon {
+                color: #c1cdb8;
+                display: inline-block;
+                margin-bottom: .5rem;
+                margin-left: .5rem;
+                margin-right: .5rem;
+                width: 28px;
+                height: 28px;
+            }
+            
+            .icon:hover {
+                color: white;
             }
 /*///////////////////////
 ////This is the chatrooms

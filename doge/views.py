@@ -113,27 +113,69 @@ def variations(request):
 
         glasses = ["Wilder", "Thug Life", "Aviators", "Rocketman", "Wolfie", "Jackass 3d", "What If I Told You"]
         hair = ["Hulk Hogan", "Joker", "Wolverine", "Wax On Wac Off", "Happy Accidents", "Eminem"]
-        
+        helmets = ["Wildcat", "Wolverine Hat", "Wolverine", "Joker", "Happy Accidents", "Watermelon", "Angus Young", "Eminem"]
+        beards = ["Mutton Chops", "Hunger Games"]
+
+
         paths = []
 
+        # This is the lazers order
         if request.POST['eyes'] == "Lazers":
-            paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
-            paths.append(f"static/doge/attributes/{body}.png")
-            paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
-            paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
-            paths.append(f"static/doge/attributes/heads/head_{head}.png")
-            paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
-            paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
-        
+            # This is lazers + a beard and helmet
+            if (request.POST['mouth'] in beards and request.POST['head'] in helmets):
+                paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
+                paths.append(f"static/doge/attributes/{body}.png")
+                paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
+                paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
+                paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
+                paths.append(f"static/doge/attributes/heads/head_{head}.png")
+                paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
+            else:
+                paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
+                paths.append(f"static/doge/attributes/{body}.png")
+                paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
+                paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
+                paths.append(f"static/doge/attributes/heads/head_{head}.png")
+                paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
+                paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
+        # This is a glasses + hair
         elif (request.POST['eyes'] in glasses) and (request.POST['head'] in hair):
+            # This is a glasses + hair + beard + helmet/glasses
+            if (request.POST['mouth'] in beards and (request.POST['head'] in helmets or request.POST['eyes'] in glasses)):
+                paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
+                paths.append(f"static/doge/attributes/{body}.png")
+                paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
+                paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
+                paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
+                paths.append(f"static/doge/attributes/heads/head_{head}.png")
+                paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
+            else:
+                paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
+                paths.append(f"static/doge/attributes/{body}.png")
+                paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
+                paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
+                paths.append(f"static/doge/attributes/heads/head_{head}.png")
+                paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
+                paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
+        # This is just beard + helmet/glasses
+        elif (request.POST['mouth'] in beards and (request.POST['head'] in helmets or request.POST['eyes'] in glasses)):
             paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
             paths.append(f"static/doge/attributes/{body}.png")
             paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
             paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
-            paths.append(f"static/doge/attributes/heads/head_{head}.png")
-            paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
             paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
-
+            paths.append(f"static/doge/attributes/eyes/eyes_{eyes}.png")
+            paths.append(f"static/doge/attributes/heads/head_{head}.png")
+        # This is hulk hogan and eyepatch
+        elif (request.POST['eyes'] == "Eyepatch" and request.POST['head'] == "Hulk Hogan"):
+            paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
+            paths.append(f"static/doge/attributes/{body}.png")
+            paths.append(f"static/doge/attributes/skins/extras_{extra}.png")
+            paths.append(f"static/doge/attributes/eyes/eyes_Eyepatch2.png")
+            paths.append(f"static/doge/attributes/bodies/body_{clothes}.png")
+            paths.append(f"static/doge/attributes/heads/head_{head}.png")
+            paths.append(f"static/doge/attributes/mouths/mouth_{mouth}.png")
+        # Normal
         else:
             paths.append(f"static/doge/attributes/backgrounds/background_{background}.png")
             paths.append(f"static/doge/attributes/{body}.png")

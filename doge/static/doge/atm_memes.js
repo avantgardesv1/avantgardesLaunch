@@ -80,6 +80,8 @@ function load_page() {
             else if (accounts.length == 0) {
                 document.querySelector("#p1_1").innerHTML = "** This is for explanation purposes only **";
                 document.querySelector("#div2").style.display = 'inline-flex';
+                document.querySelector("#p1_2").style.display = "none";
+
             }
             // If the user is connected and a memeber don't show them the preview
             else {
@@ -91,6 +93,8 @@ function load_page() {
     else {
         document.querySelector("#p1_1").innerHTML = "** This is for explanation purposes only **";
         document.querySelector("#div2").style.display = 'inline-flex';
+        document.querySelector("#p1_2").style.display = "none";
+
     }
 
     ////////////////////
@@ -111,14 +115,18 @@ function load_page() {
         const tokenBalance = await contract.methods.balanceOf(account).call()
 
         if (tokenBalance >= 1) {
-            document.querySelector("#p1_1").innerHTML = "\"The Memes\",\"The Cycle\", and \"The ATM\" are currently not avaliable. Rest assured that the Avant-Gardes team are working like mad men to create these functionalities ASAP. In the meantime, all of \"The Memes\" weekly competitions are being held on Twitter. Each week on Saturday at noon the winners are selected. <br><br> ** You must own an Avant-Garde in order to win the contest **";
+            document.querySelector("#p1_1").innerHTML = "";
             document.querySelector("#div2").style.display = 'none';
             document.querySelector("#button1").style.display = "none";
+            document.querySelector("#p1_2").style.display = "block";
+
         }
         else {
             document.querySelector("#p1_1").innerHTML = "** This is for explanation purposes only **";
             document.querySelector("#div2").style.display = 'inline-flex';
             document.querySelector("#button1").style.display = "block";
+            document.querySelector("#p1_2").style.display = "none";
+
         }
 
     }
