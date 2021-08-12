@@ -192,6 +192,11 @@
     font-family: caslon;
 }
 
+    #div5_2 {
+        background-color: #324731;
+        border-radius: 5px;
+    }
+
 .bullet {
     font-size: 3rem;
     color: #324731;

@@ -163,7 +163,7 @@ function load_page2() {
         else if (isInViewport(document.querySelector("#h2_2_7"))) {
             // This is BAYC
             document.querySelector("#profile-name").innerHTML = "Hot Einstein";
-            document.querySelector("#description").innerHTML = "What if we made a hologram, and then sent the photos faster than the speed of light into the past?";
+            document.querySelector("#description").innerHTML = "What if we made a hologram, and then sent the photons faster than the speed of light into the past?";
             document.querySelector("#profile-img").src = "/static/doge/images/post-img7.png";
         }
         else if (isInViewport(document.querySelector("#h2_2_8"))) {
