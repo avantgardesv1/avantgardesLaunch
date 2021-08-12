@@ -35,7 +35,7 @@
 
             /* Holds the messeges and buttons */
             .messages {
-                font-size: 5vw;
+                font-size: 5vmax;
                 color: #c1cdb8;
                 font-family: caslon openface;
                 border-radius: 25px;

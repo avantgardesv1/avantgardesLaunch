@@ -25,6 +25,18 @@
     color: white;
 }
 
+.logo_header{
+    font-family: caslon openface;
+    color: #c1cdb8;
+    font-size: 2;
+}
+
+.small {
+    font-family: caslon;
+    color: #c1cdb8;
+    font-size: .75rem;
+}
+
 
 /* /////////////////////
 ///// This is the main logo at the top
@@ -63,7 +75,7 @@
             /* Holds Avvant Gardess */
             #h1_1_1 {
 
-                font-size: 10vw;
+                font-size: 10vmax;
                 color: #c1cdb8;
                 font-family: caslon openface;
                 border-radius: 25px;
@@ -73,7 +85,7 @@
             #p1 {
                 color: #c1cdb8;
                 font-family: caslon;
-                font-size: 2vw;
+                font-size: 2vmax;
             }
                 /* Holds the h1_2 */
                 #div1_1_2_1_1 {
