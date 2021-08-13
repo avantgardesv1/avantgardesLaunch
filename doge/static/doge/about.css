@@ -4,7 +4,8 @@
 
 .header {
     color: #1a2e25;
-    font-family: Calson;
+    font-family: caslon openface;
+    font-weight: 500;
 }
 .body {
     color: white;
@@ -264,6 +265,7 @@
         color:#1a2e25;
         font-size: 1.75rem;
         border-right: 3px solid #1a2e25; 
+        font-weight: 500;
     }
     .common-sub-p{
         font-family: caslon;

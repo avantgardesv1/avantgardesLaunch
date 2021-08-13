@@ -1,0 +1,83 @@
+{% extends "doge/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div class="container" id="div1">
+        <div class="container" id="div1_1">
+
+
+            <div class="containerdiv1_1_123" id="div1_1_1">
+                <h1 class="messages mb-3" id="h1_1">FAQs</h1>
+            </div>
+
+            <!--<p class="text-center" id="p1">This will become avaliable one week after the launch.</p>-->
+        </div>
+    </div>
+
+    <hr>
+
+
+    
+
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button id="button1" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Why was this created?
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">The Avant-Gardes is an attempt to create art that lasts. We want art that is constantly changing and growing, and a community that does the same. We fully expect our fan base to come and go as they please over the years. This community should be useful to you... until it is not. Whether you wish to be an artist or just a member, come be apart of what will hopefully be one of the coolest community art projects of the century.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button id="button2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              The classic - What is an NFT?
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">An NFT is a fancy term for digital art. The only difference is that unlike a random photo on the internet, an NFT is verifiable on a blockchain. This could be a picture, video, or even just some text, but its authenticity can be validated by anyone.</div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-heading3">
+              <button id="button2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse3" aria-expanded="false" aria-controls="flush-collapse3">
+                I want to be v2's artist?
+              </button>
+            </h2>
+            <div id="flush-collapse3" class="accordion-collapse collapse" aria-labelledby="flush-heading3" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">Well the first step is to sumbit yourself <a class="links" href="{% url 'submissions' %}">here</a>. If you have any other questions about this we encourage you to send us an email. We will respond promptly.</div>
+            </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button id="buttonlast" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Add New +
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body text-center">Email us your question :) <br><br> 
+            
+                <a target="_blank" href="mailto:avantgardesv1@gmail.com?subject=FAQS" style="color: #324731" class="">
+                    <svg id="email" data-bs-toggle="tooltip" data-bs-placement="top" title="Send Email" xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="icon bi bi-envelope-fill" viewBox="0 0 16 16">
+                      <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+                    </svg>
+                    </a>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      
+   
+{% endblock %}
+
+{% block script %}
+    <link href="{% static 'doge/faqs.css' %}" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+{% endblock %}

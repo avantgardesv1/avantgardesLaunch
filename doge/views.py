@@ -215,6 +215,12 @@ def submissions(request):
 def atm_memes(request):
     if request.method == "GET":
         return render(request, "doge/atm_memes.html")
+def faqs(request):
+    if request.method == "GET":
+        return render(request, "doge/faqs.html")
+def community(request):
+    if request.method == "GET":
+        return render(request, "doge/community.html")
 
 
 
@@ -239,3 +245,5 @@ def metadata(request, metadata_id):
             metadata_response = metadata_list[metadata_id]
     
     return JsonResponse(metadata_response, safe=False)
+
+

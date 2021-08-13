@@ -11,6 +11,8 @@ urlpatterns = [
     path("atm", views.atm, name="atm"),
     path('submissions', views.submissions, name="submissions"),
     path('atm_memes', views.atm_memes, name="atm_memes"),
+    path('faqs', views.faqs, name="faqs"),
+    path("community", views.community, name="community"),
 
 
 

@@ -1,0 +1,225 @@
+/*/////////////////////////
+///// Just some basic classes that are used often
+////////////////////////////*/
+
+.header {
+    color: #1a2e25;
+    font-family: caslon openface;
+    font-weight: 500;
+}
+.body {
+    color: white;
+    font-family: caslon;
+    font-size: 1.25rem;
+}
+.background {
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-position: -5px -25px;
+    background-repeat: repeat;
+    background-size: auto;
+}
+.links {
+    color: #1a2e25;
+    
+}
+.links:hover {
+    color: white;
+}
+
+.logo_header{
+    font-family: caslon openface;
+    color: #c1cdb8;
+    font-size: 2;
+}
+
+.small {
+    font-family: caslon;
+    color: #c1cdb8;
+    font-size: .75rem;
+} 
+
+
+/* First div container */
+#div1 {
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-position: -5px -25px;
+    background-repeat: repeat;
+    background-size: auto;
+    background-color: #324731;
+
+    padding-top: 5rem;
+    padding-bottom:2rem;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 0 0 25px 25px;
+}
+    /* Second div container */
+    #div1_1 {
+        background-attachment: fixed;
+        background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+        background-position: -5px -25px;
+        background-repeat: repeat;
+        background-size: auto;
+        text-align: center;
+        background-color: #324731;
+
+        padding-top: 3%;
+        padding-bottom: 3%;
+    }
+        /* This is the messages and buttons divs */
+        .div1_1_123 {
+            margin: auto;
+}
+
+            /* Holds the messeges and buttons */
+            .messages {
+                font-size: 5vmax;
+                color: #c1cdb8;
+                font-family: caslon openface;
+                border-radius: 25px;
+                line-height: 1;
+
+            }
+
+            label {
+                text-align: left;
+                font-family: caslon;
+                color: #c1cdb8;
+            }
+
+            /* This holds the form */
+            #form1 {
+                margin: auto;
+            }
+
+            .buttons {
+                font-family: caslon;
+                background-color: #c1cdb8;
+                border-color: #c1cdb8;
+                color: #324731;
+            }
+
+            .buttons:hover {
+                background-color: transparent;
+                color: #c1cdb8;
+                border-color: #c1cdb8;;
+            }
+
+            #button3 {
+                margin-top: 5px;
+            }
+
+        #p1 {
+            text-align: left;
+            color: #c1cdb8;
+            font-family: caslon;
+            margin-top: 10px;
+        }
+
+/*//////////////////////
+//// FAQs body
+///////////////////////*/
+#accordionFlushExample {
+    background-color: transparent;
+}
+.accordion-item {
+    background-color: transparent;
+}
+
+
+
+
+#button1 {
+    background-color: #324731;
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-position: -5px -25px;
+    background-repeat: repeat;
+    background-size: auto;
+    font-family: caslon openface;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #c1cdb8;
+    border-radius: 25px 25px 0 0;
+    
+}
+#button1:focus {
+    box-shadow:none;
+    color:#c1cdb8;
+
+}
+#button2 {
+    background-color: #324731;
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-position: -5px -25px;
+    background-repeat: repeat;
+    background-size: auto;
+    font-family: caslon openface;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #c1cdb8;
+    border-top: 1px solid #c1cdb8;
+    
+}
+#button2:focus {
+    box-shadow:none;
+    color:#c1cdb8;
+
+}
+#buttonlast {
+    background-color: #324731;
+    background-attachment: fixed;
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    background-position: -5px -25px;
+    background-repeat: repeat;
+    background-size: auto;
+    color: #c1cdb8;
+    font-family: caslon openface;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-top:1px solid #c1cdb8;
+    border-radius: 0 0 25px 25px;
+    
+}
+#buttonlast:focus {
+    box-shadow:none;
+    color:#c1cdb8;
+    border-radius: 0;
+
+}
+
+.accordion-body {
+    color: white;
+    background-color: #c1cdb8;
+    font-family: caslon;
+    font-size: 1.25rem;
+}
+
+
+
+.accordion-button::after {
+    display: none;
+}
+
+
+
+
+
+
+
+.accordion .accordion-item,
+.accordion .accordion-item:last-child .accordion-item {
+  border-radius: 25px;
+  border: none;
+}
+
+#email:hover {
+    color: white;
+}
+
+
+
+
