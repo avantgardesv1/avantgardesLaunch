@@ -231,7 +231,7 @@ def metadata(request, metadata_id):
 
         totalSupply = contract.functions.totalSupply().call()
 
-        if metadata_id <= totalSupply:
+        if metadata_id > totalSupply:
             print(f"{metadata_id} : post")
             with open('doge/api_list3.json') as json_file:
                 metadata_list = json.load(json_file)
