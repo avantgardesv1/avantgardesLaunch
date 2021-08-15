@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let bsTooltip = new bootstrap.Tooltip(tooltipElement);
 
     document.querySelector("#contractAddress").addEventListener('click', () => {
-        copyToClipboard("0xAbFA030A042ecbaa4FF1C6f0b27F331E0F7beebf");
+        copyToClipboard("0x7E4d0E1b36c375d95FB7282593c7d46864C82ca6");
         
         // update
         tooltipElement.title = 'Copied';

@@ -60,7 +60,6 @@ function load_page() {
                     //Finally we can mint
                     else {
                         mint(count);
-                        document.querySelector("#h1_3").innerHTML = "Welcome To The Club!"
                     }
 
                 });
@@ -104,8 +103,21 @@ function load_page() {
         // Calculate the price
         const price = web3.utils.toWei('0.08') * nof_tokens;
         // MINT!
-        //await contract.methods.mintAvantGardes(nof_tokens).send( {from: account, value: price})
-        
+        await contract.methods.mintAvantGardes(nof_tokens).send( {from: account, value: price})
+        .on('transactionHash', function(hash){
+            document.querySelector("#h1_3").innerHTML = "Welcome To The Club!"
+            document.querySelector("#p1").innerHTML = `View your transaction on etherscan <a target="_blank" style="color:#c1cdb8;" href="https://etherscan.io/tx/${hash}">here</a>.`  
+            document.querySelector("#spinner").style.display = "block";
+        })
+        var inner = document.querySelector("#p1").innerHTML;
+
+        result = await contract.methods.totalSupply().call()
+        console.log(`Total Supply: ${result}`)
+
+        document.querySelector("#p1").innerHTML = `${inner}<br><br>Once your transaction status reads "Success", you can view your NFT on Opensea <a target="_blank" style="color:#c1cdb8;" href="https://opensea.io/assets/0x7E4d0E1b36c375d95FB7282593c7d46864C82ca6/${result - 1}">here</a>.<br><br>(If you can't see the picture on Opensea click "refresh metadata")`
+        document.querySelector("#spinner").style.display = "none";
+
+
 
         ////////////////////
         // Extra Calls/Sends 
@@ -127,7 +139,7 @@ function load_page() {
         //result = await contract.methods.tokenURI(7).call()
         //console.log(`Token URI: ${result}`)
 
-        result = await contract.methods.totalSupply().call()
-        console.log(`Total Supply: ${result}`)
+        
+
     }
 }
