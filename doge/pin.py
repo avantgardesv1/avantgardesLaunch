@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-img_path = "./1.png"
+img_path = sys.argv[1]
 
 node_path = '/usr/local/bin/node'
 

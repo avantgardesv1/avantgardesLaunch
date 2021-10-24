@@ -61,13 +61,14 @@ JWT: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiI0Mz
 const process = require("process");
 const fs = require("fs");
 const pinataSDK = require("@pinata/sdk");
-const PINATA_API_KEY = "bce4108aa4a39b116b4d";
-const PINATA_SECRET_API_KEY = "6ada3ec39737f91450a4df29e3c25e98e93448610a4c5afd1249611f33ec5c9b";
+const PINATA_API_KEY = "392d7e605a508b830dad";
+const PINATA_SECRET_API_KEY = "d0083387b73e374151eee5dcc02d8d15879f29df5588c1b1d4243957c6ba58aa";
 const pinata = pinataSDK(PINATA_API_KEY,PINATA_SECRET_API_KEY);
 
 var imgPath = process.argv[2]
 const readableStreamForFile =fs.createReadStream(imgPath);
 const options = {};
+
 
 pinata.pinFileToIPFS(readableStreamForFile, options).then((result) => {
     console.log(result["IpfsHash"])
